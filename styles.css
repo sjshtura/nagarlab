@@ -300,6 +300,16 @@ body.lang-bn .section-heading p {
   color: #f1ffe8;
 }
 
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.upcoming-card {
+  background: linear-gradient(145deg, rgba(228, 241, 208, 0.95), rgba(204, 229, 175, 0.88));
+}
+
 .use-case-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -439,6 +449,7 @@ footer a {
   }
 
   .platform-grid,
+  .upcoming-grid,
   .use-case-grid,
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -458,6 +469,7 @@ footer a {
   }
 
   .platform-grid,
+  .upcoming-grid,
   .use-case-grid,
   .outcome-pills,
   .gallery-grid {
