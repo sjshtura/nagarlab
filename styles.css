@@ -304,6 +304,16 @@ body.lang-bn .section-heading p {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+  align-items: stretch;
+}
+
+.upcoming-grid .platform-card {
+  display: block;
+  min-height: 210px;
+}
+
+.upcoming-grid .coming-soon {
+  min-height: 210px;
 }
 
 .upcoming-card {
