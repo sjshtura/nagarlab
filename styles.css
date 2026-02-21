@@ -1,0 +1,601 @@
+:root {
+  --bg: #edf1e6;
+  --sage: #d6e8bf;
+  --deep: #07270f;
+  --forest: #1e6c3d;
+  --mint: #9dcf95;
+  --text: #132316;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Space Grotesk", sans-serif;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+body.lang-bn {
+  font-family: "Noto Sans Bengali", "Space Grotesk", sans-serif;
+}
+
+body.lang-bn h1,
+body.lang-bn h2,
+body.lang-bn h3 {
+  font-family: "Noto Serif Bengali", "Noto Sans Bengali", serif;
+  line-height: 1.24;
+}
+
+.page-bg {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(158, 203, 143, 0.35), transparent 42%),
+    radial-gradient(circle at 85% 20%, rgba(73, 133, 83, 0.2), transparent 38%),
+    radial-gradient(circle at 70% 80%, rgba(6, 39, 19, 0.08), transparent 42%);
+  z-index: -1;
+}
+
+main,
+header,
+footer,
+.topbar {
+  width: min(1180px, calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+.topbar {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.6rem;
+  color: #0e2a15;
+}
+
+body.lang-bn .brand {
+  font-family: "Noto Serif Bengali", serif;
+}
+
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid #7f9f78;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+  padding: 0.2rem;
+}
+
+.lang-btn {
+  border: 0;
+  background: transparent;
+  color: #244b2e;
+  font-weight: 700;
+  min-height: 42px;
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.lang-btn.active {
+  background: #123f1f;
+  color: #ebf7de;
+}
+
+.hero {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(7, 39, 15, 0.18);
+  background: #e5efd5;
+}
+
+.hero-photo {
+  min-height: 420px;
+  background-image:
+    linear-gradient(to right, rgba(5, 22, 11, 0.2), rgba(5, 22, 11, 0.08)),
+    url("https://upload.wikimedia.org/wikipedia/commons/a/a6/Bangladesh_National_Parliament_Building%2C_Dhaka%2C_Bangladesh.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero-content {
+  padding: clamp(1.8rem, 2.8vw, 3rem);
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #244b2e;
+}
+
+body.lang-bn .eyebrow {
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Serif Display", serif;
+  margin: 0;
+  line-height: 1.06;
+  color: #0b2411;
+}
+
+h1 {
+  font-size: clamp(2rem, 4.7vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.45rem);
+}
+
+h3 {
+  font-size: 1.55rem;
+  overflow-wrap: anywhere;
+}
+
+.lead {
+  font-size: 1.08rem;
+  max-width: 44ch;
+  line-height: 1.6;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero-tags span {
+  border: 1px solid #86a177;
+  border-radius: 999px;
+  padding: 0.42rem 0.9rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+section {
+  margin-top: 2.4rem;
+}
+
+.dhaka-gallery {
+  margin-top: 1.6rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.gallery-card {
+  margin: 0;
+  border: 1px solid #9ab08c;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f4f8ee;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-card figcaption {
+  padding: 0.75rem 0.85rem;
+  font-size: 0.92rem;
+  color: #27442f;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.1rem;
+}
+
+.intro > div,
+.intro-panel {
+  padding: 1.5rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.46);
+  border: 1px solid rgba(22, 52, 27, 0.18);
+}
+
+.intro p {
+  line-height: 1.72;
+  margin-top: 0.85rem;
+}
+
+.intro-panel h3 {
+  font-size: 1.35rem;
+}
+
+.intro-panel ul {
+  margin: 1rem 0 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.72rem;
+  line-height: 1.5;
+}
+
+.section-heading {
+  margin-bottom: 1rem;
+}
+
+.section-heading p {
+  margin: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #3d6746;
+}
+
+body.lang-bn .section-heading p {
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.platform-card {
+  min-height: 210px;
+  padding: 1.2rem;
+  border-radius: 20px;
+  border: 1px solid #9ab08c;
+  background: linear-gradient(150deg, rgba(236, 246, 228, 0.93), rgba(216, 233, 194, 0.83));
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.platform-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(18, 56, 27, 0.16);
+}
+
+.platform-card h3 {
+  font-size: 1.4rem;
+  overflow-wrap: anywhere;
+}
+
+.platform-card p {
+  margin-top: 0.6rem;
+  line-height: 1.53;
+}
+
+.coming-soon {
+  background: linear-gradient(145deg, #11311a, #0a220f);
+  color: #d8efcb;
+  border-color: #30593a;
+}
+
+.coming-soon h3 {
+  color: #f1ffe8;
+}
+
+.use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.use-case-grid article {
+  border-radius: 20px;
+  padding: 1.15rem;
+  border: 1px solid #98b08d;
+  background: #f4f8ee;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.use-case-grid article:nth-child(2),
+.use-case-grid article:nth-child(4) {
+  background: #e7f2d9;
+}
+
+.use-case-grid article:nth-child(5) {
+  background: linear-gradient(145deg, #07270f, #123b1f);
+  color: #e2f4d3;
+  border-color: #335f3e;
+}
+
+.use-case-grid article:nth-child(5) h3 {
+  color: #f4ffe9;
+}
+
+.num {
+  width: max-content;
+  border-radius: 999px;
+  padding: 0.18rem 0.62rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: #cce1af;
+  color: #2c5835;
+}
+
+.outcomes {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #14311c, #0a220f);
+  color: #e0f3d4;
+}
+
+.outcome-title {
+  padding: 1.2rem;
+}
+
+.outcome-title h2,
+.outcome-title p {
+  color: #eafede;
+}
+
+.outcome-title p {
+  margin-top: 0.8rem;
+  line-height: 1.6;
+}
+
+.outcome-pills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.72rem;
+}
+
+.outcome-pills div {
+  background: #e5f4d7;
+  color: #0f2615;
+  padding: 0.9rem;
+  border-radius: 16px;
+  border: 1px solid #8fb589;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.outcome-pills span {
+  font-size: 0.93rem;
+}
+
+footer {
+  margin-top: 1.4rem;
+  margin-bottom: 2rem;
+  padding: 1.8rem;
+  border-radius: 20px;
+  border: 1px solid #90ab87;
+  text-align: center;
+  background: rgba(240, 248, 233, 0.75);
+}
+
+footer p {
+  margin: 0.45rem 0 0.8rem;
+  font-size: 1.05rem;
+}
+
+footer a {
+  color: #173c20;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: rise 0.75s ease forwards;
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1020px) {
+  h1 {
+    font-size: clamp(1.9rem, 6vw, 2.8rem);
+  }
+
+  h2 {
+    font-size: clamp(1.45rem, 4.8vw, 2rem);
+  }
+
+  h3 {
+    font-size: clamp(1.2rem, 3.4vw, 1.4rem);
+  }
+
+  .hero,
+  .intro,
+  .outcomes {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-grid,
+  .use-case-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-photo {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 680px) {
+  main,
+  header,
+  footer,
+  .topbar {
+    width: min(1180px, calc(100% - 1.25rem));
+  }
+
+  .platform-grid,
+  .use-case-grid,
+  .outcome-pills,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    margin-top: 0.8rem;
+    border-radius: 20px;
+  }
+
+  .hero-content,
+  .intro > div,
+  .intro-panel,
+  .outcome-title,
+  .outcomes,
+  footer {
+    padding: 1rem;
+  }
+
+  .topbar {
+    margin-top: 0.7rem;
+    position: sticky;
+    top: 0.5rem;
+    z-index: 20;
+    padding: 0.5rem 0.65rem;
+    border-radius: 999px;
+    background: rgba(238, 245, 228, 0.92);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(34, 65, 40, 0.18);
+  }
+
+  .brand {
+    font-size: 1.28rem;
+  }
+
+  .lang-btn {
+    min-height: 40px;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.84rem;
+  }
+
+  .hero-photo {
+    min-height: 220px;
+  }
+
+  .lead {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .hero-tags span {
+    font-size: 0.82rem;
+    padding: 0.36rem 0.7rem;
+  }
+
+  section {
+    margin-top: 1.5rem;
+  }
+
+  .gallery-card img {
+    height: 200px;
+  }
+
+  .platform-card,
+  .use-case-grid article,
+  .outcome-pills div {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .intro p,
+  .platform-card p,
+  .use-case-grid article p,
+  .outcome-title p {
+    line-height: 1.58;
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main,
+  header,
+  footer,
+  .topbar {
+    width: calc(100% - 0.9rem);
+  }
+
+  .topbar {
+    top: 0.35rem;
+    padding: 0.4rem 0.5rem;
+    gap: 0.45rem;
+  }
+
+  .brand {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    line-height: 1.12;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .hero-content {
+    gap: 0.72rem;
+  }
+
+  .eyebrow,
+  .section-heading p {
+    font-size: 0.72rem;
+  }
+
+  .intro > div,
+  .intro-panel,
+  .platform-card,
+  .use-case-grid article,
+  .outcome-pills div,
+  footer {
+    border-radius: 14px;
+  }
+
+  .gallery-card img {
+    height: 178px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
